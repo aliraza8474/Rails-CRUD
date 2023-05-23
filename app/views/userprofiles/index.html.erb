@@ -1,0 +1,20 @@
+<h1 class='text-center mb-5'>Here you can see Users posts</h1>
+<i class="bi bi-person-circle"></i>
+<div class='col-lg-6 mx-auto'>
+    <div class='card' >
+        <% @userprofiles.each do |profile| %>
+        <div class='card-header'>
+            <h2 class='text-center' > <%= profile.name %></h2>
+        </div>
+        <div class='card-body'>
+            <p class='lead'><%= profile.first_name %></p>
+            <p class='lead'><%= profile.last_name %></p>
+            <p class='lead'><%= profile.email %></p>
+            <p class='lead'><%= profile.gender %></p>
+            <p class='lead'><%= profile.post %></p>
+
+        </div>
+        <%end%>
+    </div>
+</div>
+

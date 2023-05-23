@@ -1,0 +1,22 @@
+<div class='col-lg-6 mx-auto mb-4' >
+    <div class='card'  >
+        <div class='card-header' >
+            <h2 class='text-center' >Post Details</h2>
+        </div>
+        <div class='card-body'>
+            <div class='row'>
+                <div class='col-lg-12'>
+                    <p class='lead'><strong>Title:</strong>
+                    <%= @post.title? ? @post.title : '--NA--' %></p>
+                    <p class='lead'><strong>Description:</strong>
+                    <%= @post.description %></p>
+                </div>
+            </div>
+            <%= link_to 'Back to Home', posts_path, class:'btn btn-outline-primary
+            btn-lg rounded-0 ' %>
+            <%= link_to 'Edit Post', edit_post_path, class:'btn btn-primary
+                btn-lg rounded-0 ' %>
+        </div>
+        
+    </div>
+</div>

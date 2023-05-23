@@ -1,0 +1,47 @@
+<div class='col-lg-6 mx-auto mb-4' >
+    <div class='card'  >
+        <div class='card-header' >
+            <h2 class='text-center' >Edit Your Post</h2>
+        </div>
+
+        <%= form_with model: @post do |form| %>
+            <div class='row'>
+                <div class='col-lg-12'>
+                    <div class='form-group'>
+                        <%= form.label :title, class:' mt-2' %>
+                        <%= form.text_field :title, class:'form-control form-control-lg
+                        rounded-0' %>
+            
+                    </div>
+                </div>
+            </div>
+            <div class='row' >
+                <div class='col-lg-12' >
+                    <div class='form-group'>
+                        <%= form.label :description, class:' mt-2' %>
+                        <%= form.text_field :description, class:'form-control form-control-lg
+                        rounded-0' %>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class='row' >
+                <div class='col-lg-12' >
+                    <div class='form-group'>
+                        <%= form.label :image, class:' mt-2' %>
+                        <%= form.file_field :image, class:'form-control form-control-lg
+                        rounded-0' %>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class='row' >
+                <div class='col-lg-12 mt-4 mb-4' >
+                    <%= form.submit class:'btn btn-primary btn-lg rounded-0' %>
+                    <%= link_to 'Back to Home', posts_path, class:'btn btn-outline-primary
+                        btn-lg rounded-0 ' %>
+                </div>  
+            </div>
+        <%end%>
+    </div>
+</div>
