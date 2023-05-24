@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :posts
-  # get '/',to: 'home#index'
+  get '/home', to: 'home#welcome'
+  resources :payments
 
+  # post 'payments/create' 
+  get 'payments/success'
+  get 'payments/cancel'
+  
 
   
   devise_for :users, controller:{

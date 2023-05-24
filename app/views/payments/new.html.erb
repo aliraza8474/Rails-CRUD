@@ -1,0 +1,10 @@
+<%= form_tag(payments_path) do %>
+  <%= link_to 'View Posts', posts_path, class:'btn btn-outline-primary btn-lg rounded-0 ' %>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="A month's subscription"
+    data-amount="1000"
+    data-locale="auto">
+  </script>
+<% end %>
